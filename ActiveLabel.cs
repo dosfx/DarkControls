@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SortingAlgorithms
+namespace DarkControls
 {
-    internal class ActiveLabel : Label
+    public class ActiveLabel : Label
     {
         private bool hover;
 
