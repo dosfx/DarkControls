@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,30 @@ using System.Windows.Forms;
 
 namespace DarkControls
 {
-    public class ActiveLabel : Label
+    public class DarkButton : Label
     {
         private bool hover;
+
+        public DarkButton()
+        {
+            AutoSize = false;
+            BorderStyle = BorderStyle.FixedSingle;
+            TextAlign = ContentAlignment.MiddleCenter;
+        }
+
+        [DefaultValue(BorderStyle.FixedSingle)]
+        public new BorderStyle BorderStyle
+        {
+            get => base.BorderStyle;
+            set => base.BorderStyle = value;
+        }
+
+        [DefaultValue(ContentAlignment.MiddleCenter)]
+        public new ContentAlignment TextAlign
+        {
+            get => base.TextAlign;
+            set => base.TextAlign = value;
+        }
 
         protected override void OnMouseEnter(EventArgs e)
         {
